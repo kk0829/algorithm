@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "算法",
   "scripts": {
-    "benchmark": "node test/benchmark.js",
+    "benchmark": "node benchmark/benchmark.js",
     "test": "nyc ava --verbose --no-cache",
     "test:watch": "nyc ava --verbose --watch --no-cache",
     "report": "nyc report --reporter=html"
