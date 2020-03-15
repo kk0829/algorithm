@@ -3,6 +3,7 @@ const suite = new Benchmark.Suite();
 
 const bubbleSort = require('../src/bubbleSort');
 const insertionSort = require('../src/insertionSort');
+const selectionSort = require('../src/selectionSort');
 
 let arr = [];
 for (let i = 0; i < 1000; i++) {
@@ -17,6 +18,9 @@ suite
   })
   .add('Insertion Sort', function() {
     insertionSort(arr);
+  })
+  .add('Selection Sort', function() {
+    selectionSort(arr);
   })
   // add listeners
   .on('cycle', function(event) {
