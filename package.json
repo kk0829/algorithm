@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "算法",
   "scripts": {
-    "benchmark": "node test/benchmark.js"
+    "benchmark": "node test/benchmark.js",
+    "test": "nyc ava --verbose --no-cache",
+    "test:watch": "nyc ava --verbose --watch --no-cache",
+    "report": "nyc report --reporter=html"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -17,6 +25,8 @@
   },
   "homepage": "https://github.com/kk0829/algorithm#readme",
   "dependencies": {
-    "benchmark": "^2.1.4"
+    "ava": "^3.5.0",
+    "benchmark": "^2.1.4",
+    "nyc": "^15.0.0"
   }
 }
