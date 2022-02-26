@@ -8,9 +8,6 @@ public class BubbleSort {
 
     public int[] bubbleSort(int[] arr) {
         int len = arr.length;
-        if (len <= 1) {
-            return arr;
-        }
 
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < len - i - 1; j++) {
@@ -21,6 +18,7 @@ public class BubbleSort {
                 }
             }
         }
+
         return arr;
     }
 }
